@@ -1,0 +1,216 @@
+@keyframes animation {
+    0% {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: red;
+    }
+
+    25% {
+        top: calc(100% - 100px);
+        left: 0;
+        background: blue;
+    }
+
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+        background: green;
+    }
+
+    75% {
+        top: 0;
+        left: calc(100% - 100px);
+        background: yellow;
+    }
+
+    100% {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: red;
+    }
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.box {
+    background: #0d5825;
+    width: 600px;
+    height: 600px;
+    margin: 50px;
+    position: relative;
+}
+
+.text {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    padding: 30px 0 150px 0;
+}
+
+.card {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+    text-align: center;
+}
+
+.three {
+    position: relative;
+    left: 100px;
+    top: -15px;
+    z-index: 0;
+    transform: rotate(-25deg);
+    transition: transform .5s ease;
+}
+
+.two {
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    transform: rotate(-5deg);
+    transition: transform .5s ease;
+}
+
+.one {
+    position: relative;
+    right: 100px;
+    z-index: 2;
+    transform: rotate(10deg);
+    transition: transform .5s ease;
+}
+
+.three:hover {
+    transform: translateY(-30px) rotate(-25deg);
+    transition: transform .5s ease;
+
+}
+
+.two:hover {
+
+    transform: translateY(-30px) rotate(-5deg);
+    transition: transform .5s ease;
+}
+
+.one:hover {
+    transform: translateY(-30px) rotate(10deg);
+    transition: transform .5s ease;
+}
+
+.conteiner {
+
+    margin: 50px;
+}
+
+.pink {
+    position: relative;
+    background: pink;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    left: 1px;
+    z-index: 0;
+}
+
+.blue {
+    position: relative;
+    background: blue;
+    width: 100px;
+    height: 100px;
+    top: -40px;
+    left: 60px;
+    z-index: 2;
+}
+
+.green {
+    position: relative;
+    background: green;
+    width: 100px;
+    height: 100px;
+    top: -80px;
+    left: 120px;
+    z-index: 1;
+}
+
+.menu {
+    background: gray;
+    width: 200px;
+    height: 350px;
+    color: #fff;
+    padding-top: 20px;
+    transition: 1s;
+    transform: translateX(-90%);
+}
+
+.menu:hover {
+    transform: translateX(-10%);
+}
+
+.menu p {
+    position: relative;
+    left: 90px;
+    top: 200px;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+}
+
+.menu:hover p {
+    opacity: 0;
+}
+
+
+.menu a {
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.menu li:hover {
+    color: orange;
+    transition: .3s;
+}
+
+.menu li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.menu li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    background-color: orange;
+    margin-right: 10px;
+    transform: rotate(45deg);
+}
+
+.conteiner-animation {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+}
+
+.animation {
+    animation: animation 5s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: red;
+}
